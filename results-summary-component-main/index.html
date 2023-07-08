@@ -6,7 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
-  <link href="https://fonts.google.com/specimen/Hanken+Grotesk" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Roboto&display=swap" rel="stylesheet">
+
+  
   
   <title>Frontend Mentor | Results summary component</title>
 
@@ -14,21 +16,17 @@
   <style>
 
     body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Hanken Grotesk;
+      font-family: Hanken Grotesk, sans-serif;
     }
-
+    
     .container {
       display: flex;
-      width: 38%;
+      width: 42%;
       align-items: center;
       justify-content: center;
-      border: 2px solid orange;
       margin: auto;
     }
-
+    
     .sec1 {
       display: flex;
       flex-direction: column;
@@ -38,23 +36,17 @@
       width: 50%;
       text-align: center;
       border-radius: 25px;
-      background-image: linear-gradient(hsl(252, 100%, 67%, 1), hsl(241, 81%, 54%, 1));
-      color: hsl(224, 30%, 27%);
+      background-image: linear-gradient(hsl(252, 100%, 67%, 1),hsl(241, 81%, 54%, 1));
+      color: hsl(241, 100%, 89%);
+      font-weight: 500;
     }
-
-    .sec2 {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      padding: 25px;
-    }
-
+    
     .obtainRes {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      line-height: 2.3rem;
+      line-height: 2.7rem;
       width: 9rem;
       height: 9rem;
       border-radius: 100%;
@@ -65,20 +57,59 @@
       font-size: 4rem;
       margin-top: 1.5rem;
       color: hsl(0, 0%, 100%);
+      font-weight: 800;
     }
-
+    
     .yourResult {
       margin-bottom: 2rem;
     }
-
+    
     .bottom {
       margin-top: 11px;
     }
-
+    
     .bottom>h2 {
       color: hsl(0, 0%, 100%);
     }
 
+    .sec2 {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 25px 40px;
+    }
+    
+    .row{
+      display: flex;
+      display: grid;
+      grid-template-columns: 0.5fr 2fr 1fr;
+      margin: 10px 0px;
+      padding: 13px 0px;
+    }
+
+    .sec2 {
+      display: grid;
+    }
+
+    img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .continue {
+      /* background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)); */
+      background-color: hsl(224, 30%, 27%);
+      padding: 14px 0px;
+      border-radius: 25px;
+    }
+    
+    .continue>a {
+      color: hsl(0, 0%, 100%);
+      text-decoration: none;
+      border: none;
+      font-size: 16px;
+    }
 
 
     .attribution { 
@@ -112,6 +143,28 @@
 
   <section class="sec2">
     <h3>Summary</h3>
+  <div class="row">
+      <div><img src="/assets/images/icon-reaction.svg" alt="img"></div>
+      <div id="reaction">Reaction</div>
+      <div><span class="obtnumber">80</span> / 100</div>
+    </div>
+    <div class="row">
+      <div><img src="/assets/images/icon-memory.svg" alt="img"></div>
+      <div id="memory">Memory</div>
+      <div><span class="obtnumber">92</span> / 100</div>
+    </div>
+    <div class="row">
+      <div><img src="/assets/images/icon-verbal.svg" alt="img"></div>
+      <div id="verbal">Verbal</div>
+      <div><span class="obtnumber">61</span> / 100</div>
+    </div>
+    <div class="row">
+      <div><img src="/assets/images/icon-visual.svg" alt="img"></div>
+      <div id="visual">Visual</div>
+      <div><span class="obtnumber">72</span> / 100</div>
+    </div>
+
+    <!-- 
     <table>
       <tr>
         <td><img src="/assets/images/icon-reaction.svg" alt="img"></td>
@@ -137,7 +190,7 @@
         <td>72</td>
         <td>/ 100</td>
       </tr>
-    </table>
+    </table> -->
     <button class="continue"><a href="#">Continue</a></button>
   </section>
 
