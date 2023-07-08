@@ -17,9 +17,17 @@
 
     body {
       font-family: Hanken Grotesk, sans-serif;
+      font-size: 18px;
+    }
+
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 650px;
     }
     
-    .container {
+    .box {
       display: flex;
       width: 42%;
       align-items: center;
@@ -30,7 +38,7 @@
     .sec1 {
       display: flex;
       flex-direction: column;
-      padding: 25px 50px;
+      padding: 25px 40px;
       align-items: center;
       justify-content: center;
       width: 50%;
@@ -76,6 +84,7 @@
       display: flex;
       flex-direction: column;
       width: 50%;
+      height: 100%;
       padding: 25px 40px;
     }
     
@@ -83,12 +92,9 @@
       display: flex;
       display: grid;
       grid-template-columns: 0.5fr 2fr 1fr;
-      margin: 10px 0px;
+      margin: 5px 0px;
       padding: 13px 0px;
-    }
-
-    .sec2 {
-      display: grid;
+      border-radius: 10px;
     }
 
     img {
@@ -98,19 +104,65 @@
     }
 
     .continue {
-      /* background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)); */
       background-color: hsl(224, 30%, 27%);
       padding: 14px 0px;
       border-radius: 25px;
+      border: none;
+      margin-top: 30px;
+      margin-bottom: 20px;
     }
     
     .continue>a {
       color: hsl(0, 0%, 100%);
       text-decoration: none;
-      border: none;
       font-size: 16px;
     }
+    
+    .continue:hover {
+      background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      cursor: pointer;
 
+    }
+
+    .obtnumber {
+      font-weight: 700;
+    }
+
+    #reaction {
+      color: hsl(0, 100%, 67%);
+      font-weight: 600;
+    }
+    
+    #memory {
+      color: hsl(39, 100%, 56%);
+      font-weight: 600;
+    }
+
+    #verbal {
+      color: hsl(166, 100%, 37%);
+      font-weight: 600;
+    }
+    
+    #visual {
+      color: hsl(234, 85%, 45%);
+      font-weight: 600;
+    }
+
+    #row-reaction {
+      background-color: hsla(0, 100%, 67%, 0.06);
+    }
+
+    #row-memory {
+      background-color: hsla(39, 100%, 56%, 0.06);
+    }
+
+    #row-verbal {
+      background-color: hsla(166, 100%, 37%, 0.06);
+    }
+
+    #row-visual {
+      background-color: hsla(234, 85%, 45%, 0.06);
+    }
 
     .attribution { 
       font-size: 11px; 
@@ -121,11 +173,21 @@
       color: hsl(228, 45%, 44%);
      }
 
+     @media (min-width: 375px) and (max-width: 1440px) {
+        .sec1 {
+          flex-wrap: wrap;
+        }
+     }
+
   </style>
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
+
+  
+
+<div class="box">
 
   <section class="sec1">
     <h4 class="yourResult">Your Result</h4>
@@ -142,63 +204,53 @@
   </section>
 
   <section class="sec2">
+
     <h3>Summary</h3>
-  <div class="row">
+
+  <div class="row" id="row-reaction">
+
       <div><img src="/assets/images/icon-reaction.svg" alt="img"></div>
       <div id="reaction">Reaction</div>
       <div><span class="obtnumber">80</span> / 100</div>
+
     </div>
-    <div class="row">
+
+    <div class="row" id="row-memory">
+
       <div><img src="/assets/images/icon-memory.svg" alt="img"></div>
       <div id="memory">Memory</div>
       <div><span class="obtnumber">92</span> / 100</div>
+
     </div>
-    <div class="row">
+
+    <div class="row" id="row-verbal">
+
       <div><img src="/assets/images/icon-verbal.svg" alt="img"></div>
       <div id="verbal">Verbal</div>
       <div><span class="obtnumber">61</span> / 100</div>
+
     </div>
-    <div class="row">
+
+    <div class="row" id="row-visual">
+
       <div><img src="/assets/images/icon-visual.svg" alt="img"></div>
       <div id="visual">Visual</div>
       <div><span class="obtnumber">72</span> / 100</div>
+
     </div>
 
-    <!-- 
-    <table>
-      <tr>
-        <td><img src="/assets/images/icon-reaction.svg" alt="img"></td>
-        <td>Reaction</td>
-        <td>80</td>
-        <td>/ 100</td>
-      </tr>
-      <tr>
-        <td><img src="/assets/images/icon-memory.svg" alt="img"></td>
-        <td>Memory</td>
-        <td>92</td>
-        <td>/ 100</td>
-      </tr>
-      <tr>
-        <td><img src="/assets/images/icon-verbal.svg" alt="img"></td>
-        <td>Verbal</td>
-        <td>61</td>
-        <td>/ 100</td>
-      </tr>
-      <tr>
-        <td><img src="/assets/images/icon-visual.svg" alt="img"></td>
-        <td>Visual</td>
-        <td>72</td>
-        <td>/ 100</td>
-      </tr>
-    </table> -->
     <button class="continue"><a href="#">Continue</a></button>
+
   </section>
 
 </div>
-  
+</div>
   <div class="attribution">
+
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
+
   </div>
+
 </body>
 </html>
