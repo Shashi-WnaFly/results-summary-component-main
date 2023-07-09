@@ -29,25 +29,26 @@
 
     .box {
       display: flex;
-      width: 660px;
+      width: 600px;
       align-items: center;
       justify-content: center;
       margin: auto;
+      box-shadow: 4px 15px 30px hsl(252, 100%, 67%, 0.3);
+      border-radius: 25px;
     }
-
+    
     .sec1 {
       display: flex;
       flex-direction: column;
-      padding: 25px 40px;
+      padding: 18px 40px;
       align-items: center;
       justify-content: center;
-      width: 330px;
+      width: 300px;
       text-align: center;
       border-radius: 25px;
       background-image: linear-gradient(hsl(252, 100%, 67%, 1), hsl(241, 81%, 54%, 1));
       color: hsl(241, 100%, 89%);
       font-weight: 500;
-      height: 380px;
     }
 
     .obtainRes {
@@ -56,36 +57,39 @@
       align-items: center;
       justify-content: center;
       line-height: 43.2px;
-      width: 144px;
-      height: 144px;
+      width: 160px;
+      height: 160px;
       border-radius: 100%;
       background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     }
-
+    
     .N76 {
       font-size: 56px;
       margin-top: 24px;
       color: hsl(0, 0%, 100%);
-      font-weight: 800;
+      font-weight: 700;
     }
 
     .yourResult {
       margin-bottom: 32px;
     }
-
+    
     .bottom {
       margin-top: 11px;
     }
-
+    
     .bottom>h2 {
       color: hsl(0, 0%, 100%);
+      font-weight: 600;
     }
-
+    
     .sec2 {
       display: flex;
       flex-direction: column;
-      width: 330px;
+      width: 300px;
       padding: 25px 40px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
     }
 
     .row {
@@ -95,6 +99,7 @@
       margin: 7px 0px;
       padding: 13px 0px;
       border-radius: 5px;
+      font-size: 14px;
     }
 
     img {
@@ -129,22 +134,22 @@
 
     #reaction {
       color: hsl(0, 100%, 67%);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     #memory {
       color: hsl(39, 100%, 56%);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     #verbal {
       color: hsl(166, 100%, 37%);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     #visual {
       color: hsl(234, 85%, 45%);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     #row-reaction {
@@ -173,16 +178,21 @@
     }
 
     @media (min-width: 0px) and (max-width: 375px) {
+
+      .sec1 {
+        width: 275px;
+      }
+
+       .sec2 {
+        width: 275px;
+      }
+
       .box {
         flex-wrap: wrap;
       }
+
     }
 
-    @media (min-width: 376px) and (max-width: 1440px) {
-      .box {
-        flex-wrap: nowrap;
-      }
-    }
   </style>
 </head>
 
