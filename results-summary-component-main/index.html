@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Roboto&display=swap" rel="stylesheet">
 
-  
-  
+
+
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-
     body {
       font-family: Hanken Grotesk, sans-serif;
-      font-size: 18px;
     }
 
-    .container{
+    .container {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 650px;
+      height: 1200px;
     }
-    
+
     .box {
       display: flex;
-      width: 42%;
+      width: 660px;
       align-items: center;
       justify-content: center;
       margin: auto;
     }
-    
+
     .sec1 {
       display: flex;
       flex-direction: column;
       padding: 25px 40px;
       align-items: center;
       justify-content: center;
-      width: 50%;
+      width: 330px;
       text-align: center;
       border-radius: 25px;
-      background-image: linear-gradient(hsl(252, 100%, 67%, 1),hsl(241, 81%, 54%, 1));
+      background-image: linear-gradient(hsl(252, 100%, 67%, 1), hsl(241, 81%, 54%, 1));
       color: hsl(241, 100%, 89%);
       font-weight: 500;
+      height: 380px;
     }
-    
+
     .obtainRes {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      line-height: 2.7rem;
-      width: 9rem;
-      height: 9rem;
+      line-height: 43.2px;
+      width: 144px;
+      height: 144px;
       border-radius: 100%;
-      background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+      background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     }
-    
+
     .N76 {
-      font-size: 4rem;
-      margin-top: 1.5rem;
+      font-size: 56px;
+      margin-top: 24px;
       color: hsl(0, 0%, 100%);
       font-weight: 800;
     }
-    
+
     .yourResult {
-      margin-bottom: 2rem;
+      margin-bottom: 32px;
     }
-    
+
     .bottom {
       margin-top: 11px;
     }
-    
+
     .bottom>h2 {
       color: hsl(0, 0%, 100%);
     }
@@ -83,18 +84,17 @@
     .sec2 {
       display: flex;
       flex-direction: column;
-      width: 50%;
-      height: 100%;
+      width: 330px;
       padding: 25px 40px;
     }
-    
-    .row{
+
+    .row {
       display: flex;
       display: grid;
       grid-template-columns: 0.5fr 2fr 1fr;
-      margin: 5px 0px;
+      margin: 7px 0px;
       padding: 13px 0px;
-      border-radius: 10px;
+      border-radius: 5px;
     }
 
     img {
@@ -108,18 +108,17 @@
       padding: 14px 0px;
       border-radius: 25px;
       border: none;
-      margin-top: 30px;
-      margin-bottom: 20px;
+      margin-top: 15px;
     }
-    
+
     .continue>a {
       color: hsl(0, 0%, 100%);
       text-decoration: none;
       font-size: 16px;
     }
-    
+
     .continue:hover {
-      background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
       cursor: pointer;
 
     }
@@ -130,22 +129,22 @@
 
     #reaction {
       color: hsl(0, 100%, 67%);
-      font-weight: 600;
+      font-weight: 700;
     }
-    
+
     #memory {
       color: hsl(39, 100%, 56%);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     #verbal {
       color: hsl(166, 100%, 37%);
-      font-weight: 600;
+      font-weight: 700;
     }
-    
+
     #visual {
       color: hsl(234, 85%, 45%);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     #row-reaction {
@@ -164,93 +163,100 @@
       background-color: hsla(234, 85%, 45%, 0.06);
     }
 
-    .attribution { 
-      font-size: 11px; 
+    .attribution {
+      font-size: 11px;
       text-align: center;
     }
 
-    .attribution a { 
+    .attribution a {
       color: hsl(228, 45%, 44%);
-     }
+    }
 
-     @media (min-width: 375px) and (max-width: 1440px) {
-        .sec1 {
-          flex-wrap: wrap;
-        }
-     }
+    @media (min-width: 0px) and (max-width: 375px) {
+      .box {
+        flex-wrap: wrap;
+      }
+    }
 
+    @media (min-width: 376px) and (max-width: 1440px) {
+      .box {
+        flex-wrap: nowrap;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
 
-  
+    <div class="box">
 
-<div class="box">
+      <section class="sec1">
 
-  <section class="sec1">
-    <h4 class="yourResult">Your Result</h4>
-    <div class="obtainRes">
-      <div class="N76">
-        76
-      </div>
-      of 100
+        <h4 class="yourResult">Your Result</h4>
+        <div class="obtainRes">
+          <div class="N76">
+            76
+          </div>
+          of 100
+        </div>
+        <div class="bottom">
+          <h2>Great</h2>
+          <p>You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+
+      </section>
+
+      <section class="sec2">
+
+        <h3>Summary</h3>
+
+        <div class="row" id="row-reaction">
+
+          <div><img src="/assets/images/icon-reaction.svg" alt="img"></div>
+          <div id="reaction">Reaction</div>
+          <div><span class="obtnumber">80</span> / 100</div>
+
+        </div>
+
+        <div class="row" id="row-memory">
+
+          <div><img src="/assets/images/icon-memory.svg" alt="img"></div>
+          <div id="memory">Memory</div>
+          <div><span class="obtnumber">92</span> / 100</div>
+
+        </div>
+
+        <div class="row" id="row-verbal">
+
+          <div><img src="/assets/images/icon-verbal.svg" alt="img"></div>
+          <div id="verbal">Verbal</div>
+          <div><span class="obtnumber">61</span> / 100</div>
+
+        </div>
+
+        <div class="row" id="row-visual">
+
+          <div><img src="/assets/images/icon-visual.svg" alt="img"></div>
+          <div id="visual">Visual</div>
+          <div><span class="obtnumber">72</span> / 100</div>
+
+        </div>
+
+        <button class="continue"><a href="#">Continue</a></button>
+
+      </section>
+
     </div>
-    <div class="bottom">
-      <h2>Great</h2>
-      <p>You scored higher than 65% of the people who have taken these tests.</p>
-    </div>
-  </section>
-
-  <section class="sec2">
-
-    <h3>Summary</h3>
-
-  <div class="row" id="row-reaction">
-
-      <div><img src="/assets/images/icon-reaction.svg" alt="img"></div>
-      <div id="reaction">Reaction</div>
-      <div><span class="obtnumber">80</span> / 100</div>
-
-    </div>
-
-    <div class="row" id="row-memory">
-
-      <div><img src="/assets/images/icon-memory.svg" alt="img"></div>
-      <div id="memory">Memory</div>
-      <div><span class="obtnumber">92</span> / 100</div>
-
-    </div>
-
-    <div class="row" id="row-verbal">
-
-      <div><img src="/assets/images/icon-verbal.svg" alt="img"></div>
-      <div id="verbal">Verbal</div>
-      <div><span class="obtnumber">61</span> / 100</div>
-
-    </div>
-
-    <div class="row" id="row-visual">
-
-      <div><img src="/assets/images/icon-visual.svg" alt="img"></div>
-      <div id="visual">Visual</div>
-      <div><span class="obtnumber">72</span> / 100</div>
-
-    </div>
-
-    <button class="continue"><a href="#">Continue</a></button>
-
-  </section>
-
-</div>
-</div>
+  </div>
   <div class="attribution">
 
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
 
   </div>
 
 </body>
+
 </html>
