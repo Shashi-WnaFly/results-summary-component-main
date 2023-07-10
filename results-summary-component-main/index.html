@@ -10,31 +10,53 @@
   <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Roboto&display=swap" rel="stylesheet">
 
-
-
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    :root {
+      /* primary color */
+
+      --Light-red: hsl(0, 100%, 67%);
+      --Orangey-yellow: hsl(39, 100%, 56%);
+      --Green-teal: hsl(166, 100%, 37%);
+      --Cobalt-blue: hsl(234, 85%, 45%);
+
+      /* Gredient */
+
+      --Light-slate-blue: hsl(252, 100%, 67%);
+      --Light-royal-blue: hsl(241, 81%, 54%);
+
+      --Violet-blue: hsla(256, 72%, 46%, 1);
+      --Persian-blue: hsla(241, 72%, 46%, 0);
+
+      /* Neutral */
+
+      --White: hsl(0, 0%, 100%);
+      --Pale-blue: hsl(221, 100%, 96%);
+      --Light-lavender: hsl(241, 100%, 89%);
+      --Dark-gray-blue: hsl(224, 30%, 27%);
+    }
+
     body {
       font-family: Hanken Grotesk, sans-serif;
+      background-color: #9370db2e;
     }
 
     .container {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 1200px;
+      height: 50rem;
     }
 
     .box {
       display: flex;
       width: 600px;
-      align-items: center;
-      justify-content: center;
       margin: auto;
       box-shadow: 4px 15px 30px hsl(252, 100%, 67%, 0.3);
       border-radius: 25px;
+      background-color: var(--white);
     }
     
     .sec1 {
@@ -46,7 +68,7 @@
       width: 300px;
       text-align: center;
       border-radius: 25px;
-      background-image: linear-gradient(hsl(252, 100%, 67%, 1), hsl(241, 81%, 54%, 1));
+      background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
       color: hsl(241, 100%, 89%);
       font-weight: 500;
     }
@@ -60,13 +82,13 @@
       width: 160px;
       height: 160px;
       border-radius: 100%;
-      background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+      background-image: linear-gradient(var(--Violet-blue), var(--Persian-blue));
     }
     
     .N76 {
       font-size: 56px;
       margin-top: 24px;
-      color: hsl(0, 0%, 100%);
+      color: var(--White);
       font-weight: 700;
     }
 
@@ -79,7 +101,7 @@
     }
     
     .bottom>h2 {
-      color: hsl(0, 0%, 100%);
+      color: var(--White);
       font-weight: 600;
     }
     
@@ -90,6 +112,7 @@
       padding: 25px 40px;
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
+      background-color: var(--White);
     }
 
     .row {
@@ -123,7 +146,7 @@
     }
 
     .continue:hover {
-      background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
       cursor: pointer;
 
     }
@@ -133,22 +156,22 @@
     }
 
     #reaction {
-      color: hsl(0, 100%, 67%);
+      color: var(--Light-red);
       font-weight: 600;
     }
 
     #memory {
-      color: hsl(39, 100%, 56%);
+      color: var(--Orangey-yellow);
       font-weight: 600;
     }
 
     #verbal {
-      color: hsl(166, 100%, 37%);
+      color: var(--Green-teal);
       font-weight: 600;
     }
 
     #visual {
-      color: hsl(234, 85%, 45%);
+      color: var(--Dark-gray-blue);
       font-weight: 600;
     }
 
@@ -171,24 +194,30 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      margin-top: 20px;
     }
-
+    
     .attribution a {
-      color: hsl(228, 45%, 44%);
+      font-size: 14px;
+      color: hsla(245, 95%, 27%, 0.98);
+      font-weight: 700;
     }
 
-    @media (min-width: 0px) and (max-width: 375px) {
+    @media (max-width: 375px ) {
 
       .sec1 {
         width: 275px;
+        margin: 0px 100px;
       }
 
        .sec2 {
         width: 275px;
+        margin: 0px 100px;
       }
 
       .box {
         flex-wrap: wrap;
+        box-shadow: none;
       }
 
     }
@@ -263,7 +292,7 @@
   <div class="attribution">
 
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Shashi Anand</a>.
 
   </div>
 
