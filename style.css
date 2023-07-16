@@ -124,14 +124,20 @@
   }
 
   .summary_row {
-    display: grid;
-    align-content: start;
-    grid-template-columns: 0.4fr 2fr 0.9fr;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0.7rem 0rem;
     border-radius: .31rem;
     font-size: 0.87rem;
+  }
+
+  .img_sensors{
+    display: flex;
+  }
+
+  .sensors{
+    margin-left: 1rem;
   }
 
   img {
@@ -203,6 +209,7 @@
   /*      *****     Footer     *****        */
 
   .attribution {
+    margin-top: 1rem;
     font-size: .69rem;
     text-align: center;
   }
@@ -217,25 +224,35 @@
 
   @media (max-width: 39rem ) {
 
-    body {
+      body {
       height: 48rem;
       display: flex;
       flex-direction: column;
     }
 
-    .report_card{
+      .report_card{
         flex-direction: column;
         place-items: center;
         box-shadow: none;
         border-radius: 0%;
-      }
+    }
 
       .summary{
         width: 100%;
         border-radius: 0%;
-      }
+    }
 
-    .result_card{
+    .result_score{
+      width: 8.5rem;
+      height: 8.5rem;
+      
+    }
+
+    .score{
+      font-size: 3rem;
+    }
+
+      .result_card{
       width: auto;
     }
 
