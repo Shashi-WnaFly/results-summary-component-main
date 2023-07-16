@@ -9,285 +9,74 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    :root {
-      /* primary color */
 
-      --Light-red: hsl(0, 100%, 67%);
-      --Orangey-yellow: hsl(39, 100%, 56%);
-      --Green-teal: hsl(166, 100%, 37%);
-      --Cobalt-blue: hsl(234, 85%, 45%);
-
-      /* Gredient */
-
-      --Light-slate-blue: hsl(252, 100%, 67%);
-      --Light-royal-blue: hsl(241, 81%, 54%);
-
-      --Violet-blue: hsla(256, 72%, 46%, 1);
-      --Persian-blue: hsla(241, 72%, 46%, 0);
-
-      /* Neutral */
-
-      --White: hsl(0, 0%, 100%);
-      --Pale-blue: hsl(221, 100%, 96%);
-      --Light-lavender: hsl(241, 100%, 89%);
-      --Dark-gray-blue: hsl(224, 30%, 27%);
-    }
-
-    body {
-      font-family: Hanken Grotesk, sans-serif;
-      background-color: #9370db2e;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 50rem;
-    }
-
-    .box {
-      display: flex;
-      width: 600px;
-      margin: auto;
-      box-shadow: 4px 15px 30px hsl(252, 100%, 67%, 0.3);
-      border-radius: 25px;
-      background-color: var(--white);
-    }
-    
-    .sec1 {
-      display: flex;
-      flex-direction: column;
-      padding: 18px 40px;
-      align-items: center;
-      justify-content: center;
-      width: 300px;
-      text-align: center;
-      border-radius: 25px;
-      background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
-      color: hsl(241, 100%, 89%);
-      font-weight: 500;
-    }
-
-    .obtainRes {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      line-height: 43.2px;
-      width: 160px;
-      height: 160px;
-      border-radius: 100%;
-      background-image: linear-gradient(var(--Violet-blue), var(--Persian-blue));
-    }
-    
-    .N76 {
-      font-size: 56px;
-      margin-top: 24px;
-      color: var(--White);
-      font-weight: 700;
-    }
-
-    .yourResult {
-      margin-bottom: 32px;
-    }
-    
-    .bottom {
-      margin-top: 11px;
-    }
-    
-    .bottom>h2 {
-      color: var(--White);
-      font-weight: 600;
-    }
-    
-    .sec2 {
-      display: flex;
-      flex-direction: column;
-      width: 300px;
-      padding: 25px 40px;
-      border-top-right-radius: 25px;
-      border-bottom-right-radius: 25px;
-      background-color: var(--White);
-    }
-
-    .row {
-      display: flex;
-      display: grid;
-      grid-template-columns: 0.5fr 2fr 1fr;
-      margin: 7px 0px;
-      padding: 13px 0px;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-
-    img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .continue {
-      background-color: hsl(224, 30%, 27%);
-      padding: 14px 0px;
-      border-radius: 25px;
-      border: none;
-      margin-top: 15px;
-    }
-
-    .continue>a {
-      color: hsl(0, 0%, 100%);
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    .continue:hover {
-      background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
-      cursor: pointer;
-
-    }
-
-    .obtnumber {
-      font-weight: 700;
-    }
-
-    #reaction {
-      color: var(--Light-red);
-      font-weight: 600;
-    }
-
-    #memory {
-      color: var(--Orangey-yellow);
-      font-weight: 600;
-    }
-
-    #verbal {
-      color: var(--Green-teal);
-      font-weight: 600;
-    }
-
-    #visual {
-      color: var(--Dark-gray-blue);
-      font-weight: 600;
-    }
-
-    #row-reaction {
-      background-color: hsla(0, 100%, 67%, 0.06);
-    }
-
-    #row-memory {
-      background-color: hsla(39, 100%, 56%, 0.06);
-    }
-
-    #row-verbal {
-      background-color: hsla(166, 100%, 37%, 0.06);
-    }
-
-    #row-visual {
-      background-color: hsla(234, 85%, 45%, 0.06);
-    }
-
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    
-    .attribution a {
-      font-size: 14px;
-      color: hsla(245, 95%, 27%, 0.98);
-      font-weight: 700;
-    }
-
-    @media (max-width: 375px ) {
-
-      .sec1 {
-        width: 275px;
-        margin: 0px 100px;
-      }
-
-       .sec2 {
-        width: 275px;
-        margin: 0px 100px;
-      }
-
-      .box {
-        flex-wrap: wrap;
-        box-shadow: none;
-      }
-
-    }
-
-  </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="report_card">
 
-    <div class="box">
+    <section class="result_card">
 
-      <section class="sec1">
-
-        <h4 class="yourResult">Your Result</h4>
-        <div class="obtainRes">
-          <div class="N76">
-            76
-          </div>
-          of 100
+      <h4 class="result_title">Your Result</h4>
+      <div class="result_score">
+        <div class="score">
+          76
         </div>
-        <div class="bottom">
-          <h2>Great</h2>
-          <p>You scored higher than 65% of the people who have taken these tests.</p>
-        </div>
+        of 100
+      </div>
+      <div class="result_text_group">
+        <h2 class="result_comment">Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
 
-      </section>
+    </section>
 
-      <section class="sec2">
+    <section class="summary">
 
-        <h3>Summary</h3>
+      <h3 class="summary_title">Summary</h3>
 
-        <div class="row" id="row-reaction">
+      <div class="summary_row" id="row-reaction">
 
-          <div><img src="/assets/images/icon-reaction.svg" alt="img"></div>
-          <div id="reaction">Reaction</div>
-          <div><span class="obtnumber">80</span> / 100</div>
+        <div><img src="/assets/images/icon-reaction.svg" alt="img"></div>
+        <div id="reaction">Reaction</div>
+        <div><span class="summary_item_score">80</span> / 100</div>
 
-        </div>
+      </div>
 
-        <div class="row" id="row-memory">
+      <div class="summary_row" id="row-memory">
 
-          <div><img src="/assets/images/icon-memory.svg" alt="img"></div>
-          <div id="memory">Memory</div>
-          <div><span class="obtnumber">92</span> / 100</div>
+        <div><img src="/assets/images/icon-memory.svg" alt="img"></div>
+        <div id="memory">Memory</div>
+        <div><span class="summary_item_score">92</span> / 100</div>
 
-        </div>
+      </div>
 
-        <div class="row" id="row-verbal">
+      <div class="summary_row" id="row-verbal">
 
-          <div><img src="/assets/images/icon-verbal.svg" alt="img"></div>
-          <div id="verbal">Verbal</div>
-          <div><span class="obtnumber">61</span> / 100</div>
+        <div><img src="/assets/images/icon-verbal.svg" alt="img"></div>
+        <div id="verbal">Verbal</div>
+        <div><span class="summary_item_score">61</span> / 100</div>
 
-        </div>
+      </div>
 
-        <div class="row" id="row-visual">
+      <div class="summary_row" id="row-visual">
 
-          <div><img src="/assets/images/icon-visual.svg" alt="img"></div>
-          <div id="visual">Visual</div>
-          <div><span class="obtnumber">72</span> / 100</div>
+        <div><img src="/assets/images/icon-visual.svg" alt="img"></div>
+        <div id="visual">Visual</div>
+        <div><span class="summary_item_score">72</span> / 100</div>
 
-        </div>
+      </div>
 
-        <button class="continue"><a href="#">Continue</a></button>
+      <button class="continue_button"><a href="#">Continue</a></button>
 
-      </section>
+    </section>
 
-    </div>
   </div>
   <div class="attribution">
 
